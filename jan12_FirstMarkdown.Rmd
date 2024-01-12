@@ -1,0 +1,28 @@
+---
+title: "First Markdown File"
+author: "119 Class"
+date: "2024-01-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+We evaluate the function, square root of the quantity 3-x, at x=4.
+```{r}
+#h(x) = sqrt(3-x)
+#h(-4)
+sqrt(3-(-4))
+```
+We see the approximate value is 2.6. Note this is an approximate value of the square root of 7.
+
+We evaluate the function $h(x) = \sqrt{3-x}$ at $x=-5$.
+```{r}
+h <- function(x){
+  sqrt(3-x)
+}
+#sqrt(3-(5))
+h(5)
+```
+The warning message in R reminds us to think about the domain of $h$. The domain of $h$ is $x \geq 3$. Since $-5 < 3$, we know that $h(-5)$ is undefined. Another way to say this is because -5 is not in the domain of $h$ we know there is no output of the function $h$ corresponding to an input of -5. 
