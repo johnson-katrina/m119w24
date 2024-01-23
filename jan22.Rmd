@@ -1,0 +1,32 @@
+---
+title: "Example Project"
+author: "119 Class"
+date: "2024-01-22"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+We have measurements for 202 light bulbs measured 2014 hours after the light bulbs were turned on. It may be interesting to note that 2104 hour is close to 3 months. The intensities of the bulbs have been normalized to the intensity of the bulb when the light bulb was turned on.
+```{r}
+#Uncomment and run the line below once in the console to get the devtools package.
+  #install.packages("devtools")
+
+#Uncomment and run the line below once in the console to get the data4led package.
+  #devtools::install_github("byuidatascience/data4led") 
+
+#Use the code below to load the data4led package to your current R session.
+library(data4led)
+
+#Use the code below to load the data for all the bulbs at a time near 2100 hours.
+dist <- led_time(2100)
+```
+
+The density histogram below shows the variation in measurements of 202 bulbs.
+```{r}
+hist(dist$percent_intensity, probability = TRUE)
+
+```
+
